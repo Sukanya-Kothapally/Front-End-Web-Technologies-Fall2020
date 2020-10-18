@@ -3,3 +3,39 @@ body {
   font-size: 1.1em;
   color: #555;
 }
+
+.column {
+  float: left;
+  margin:20px;
+}
+
+.grayscale {
+  filter: grayscale(100%);
+}
+
+.blur {
+  filter: blur(2px);
+}
+
+.invert {
+  filter: invert(100%);
+}
+
+.brightness {
+  filter: brightness(50%)
+}
+.saturate {
+  filter: saturate(6);
+}
+
+.sepia {
+  filter: sepia(100%);
+}
+
+.various{
+  filter: blur(3px) grayscale(100%);
+  }
+
+
+
+

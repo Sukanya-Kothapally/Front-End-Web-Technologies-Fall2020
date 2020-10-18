@@ -2,8 +2,42 @@ body {
   font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 1.1em;
   color: #dedede;
-}
+  text-align: center;
+  margin:0;
+  }
 
 nav {
   background-image: linear-gradient(to right, rgb(1, 73, 73) 20%, black);
+  padding: 15px;  
 }
+
+.navbar a {
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  color:white;
+  float:center;
+}
+
+.navbar a:hover {
+  background-color: #006060;
+  
+}
+.navbar a:active {
+  background-color: green;
+  
+}
+.navbar a:focus{
+  background-color: orange;
+}
+
+@media screen and (max-width: 415px) {
+  .navbar a {
+    display: block;
+    padding-left: 0;
+    margin-left: 0;
+    padding:15px;
+   
+  }
+}
+

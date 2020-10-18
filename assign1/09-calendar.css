@@ -1,1 +1,39 @@
-/* Add your code here */
+body {
+  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  max-width: min-content;
+  margin: 5em auto 0 auto;
+
+  background-color: #fff;
+  border: 2px solid black;   
+}
+
+.month {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.day-of-week, .date-grid {
+display: grid;
+grid-template-columns: repeat(7, 1fr);
+
+}
+.day-of-week{
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+.date-grid button:first-child {
+  grid-column: 4;
+}
+.date-grid button {    
+  margin-bottom: 4px;  
+  border: 0;
+  width: 100%;
+  height: 4.5ch; 
+  background-color: rgb(201, 199, 199); 
+  
+}
+

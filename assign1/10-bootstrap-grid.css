@@ -9,10 +9,73 @@
   color: white;
 }
 
-/* Background colors used:
-- purple
-- navy
-- teal
-- darkgreen */
+.row1{
+  background-color: purple;
+  padding-bottom: 50px;
+  }
 
-/* Add your code here */
+.row2{
+  background-color: navy;
+  padding-bottom: 50px;
+  }
+
+.row3{
+  background-color: teal;
+  padding-bottom: 50px;
+  }  
+
+.row4,.row5{
+  background-color: darkgreen;
+  padding-bottom: 50px;
+  } 
+ 
+  * {
+    box-sizing: border-box;
+  }
+  .row > div[class^='col'] {
+    height: 100px;
+    padding: 10px;
+    border: 1px solid white;
+    color: white;
+   
+  }
+  .row1{
+    background-color: purple;
+  }
+  .row2{
+    background-color: navy;
+  }
+  .row3{
+    background-color: teal;
+  }
+  .row4{
+    background-color: darkgreen;
+  }
+  .row5{
+    background-color: darkgreen;
+  }
+  @media(min-width: 576px){
+    .row4:last-child{
+      display: none;
+    }
+  }
+  @media (max-width: 575px){
+    .row > div[class^='col'] {
+      height: 85px;
+    }
+    .row:last-child{
+      display: none;
+    }
+   
+   
+  
+  
+  }
+  /* Background colors used:
+  - purple
+  - navy
+  - teal
+  - darkgreen */
+  
+  /* Add your code here */
+  

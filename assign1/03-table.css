@@ -3,6 +3,36 @@ body {
   font-size: 20px;
   color: #555;
 }
+table{
+  border: 1px solid grey;
+  margin :0 auto;
+  border-collapse: collapse;  
+  padding:15px;
+}
+
+th { 
+  background-color: #006060;
+  color: white;
+  border-collapse: collapse;  
+  padding:15px;
+}
+
+td { 
+  border-collapse: collapse;
+  padding:15px;
+}
+
+tr{
+  border-bottom: 1px solid grey;
+}
+tr:hover{
+  background-color: rgb(159, 197, 197,0.4);
+}
+
+
+
+
+
 
 /* Colors used include:
     - #006060;
