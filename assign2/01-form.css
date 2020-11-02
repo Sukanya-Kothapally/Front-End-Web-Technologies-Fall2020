@@ -1,1 +1,180 @@
 /* Add your previous css styles for the form here  */
+body {
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #0173a0;
+  }
+  h2{
+   color: #0173a0;
+   text-align: center;
+  }
+  form{
+    background-color: white;
+    padding: 10px;
+    width: 30%;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  form input[type="text"]{
+    width: 100%;
+  }
+  form input[type="email"]{
+    width: 100%;
+  }
+  span{
+    color: rgb(161, 161, 161);
+    color: hsl(196.2,100%,33.7%);
+  }
+  select{
+    width: 100%;
+  }
+  form textarea{
+    width: 100%;
+  }
+  label{
+    padding: 2px;
+  }
+  
+  .radiocontainer {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    user-select: none;
+      font-size: small;
+  }
+  
+  .radiocontainer input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .checkradio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height:18px;
+    width: 18px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+  
+  .radiocontainer input:checked ~ .checkradio {
+    background-color: rgb(33, 129, 207);
+  }
+  
+  .checkradio:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  
+  .radiocontainer input:checked ~ .checkradio:after {
+    display: block;
+  }
+  
+  
+  .radiocontainer .checkradio:after {
+       top: 5px;
+      left:6px;
+      width: 5px;
+      height: 5px;
+      border-radius: 80%;
+    background: white;
+  }
+  
+  .checkboxcontainer {
+    display: block;
+    position: relative;  
+    padding-left: 15px;
+    margin:0px;
+    cursor: pointer;  
+    user-select: none;
+  }
+  .checkboxcontainer input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .checkstyle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 12px;
+    width: 12px;
+    background-color: #eee;
+  }
+  .checkboxcontainer input:checked ~ .checkstyle {
+    background-color: rgb(33, 129, 207);
+  }
+  .checkstyle:after {
+    content: "";
+    position: absolute;
+  }
+  
+  .checkboxcontainer input:checked ~ .checkstyle:after {
+    display: block;
+  }
+  
+  .checkboxcontainer .checkstyle:after {
+    left: 3px;
+    bottom:2px;
+    width: 3px;
+    height:5px;
+    border: solid white;
+    border-width: 0 2px 3px 0;
+    transform: rotate(45deg);
+  }
+  
+  button.submit {
+    background-color: #0173a0;
+    color: white;
+    width:50%;
+    padding: 10px;
+  }
+  button.reset {
+    background-color: #0173a0;
+    color: white;
+    width:49%;
+    padding: 10px;
+  }
+  button.submit:hover {
+    background-color: forestgreen;
+  }
+  @media (max-width: 476px){
+    form{
+      background-color: white;
+      padding: 10px;
+      width: 20%;
+      margin: 0 auto;
+      
+    }
+  }
+  @media  (max-width: 768px){
+    form{
+      background-color: white;
+      padding: 10px;
+      width: 60%;
+      margin: 0 auto;
+     
+    }
+    button.submit {
+      background-color: #0173a0;
+      color: white;
+      width:50%;
+      padding: 10px;
+    }
+    button.reset {
+      background-color: #0173a0;
+      color: white;
+      width:45%;
+      padding: 10px;
+    }
+  }
+  

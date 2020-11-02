@@ -10,6 +10,48 @@
   <body>
     <!-- Step 1 - Insert your previous form here -->
     <!-- Step 2 - Address any responsiveness and/or accessibility issues -->
-    <script src="01-form.js"></script>
+    
+    <form>    
+      <h2>INTRO SURVEY </h2>
+      <label for="name"><b>Name</b> <span>(required)</span>
+      <input type="text" id="name" name="name" required></label><br><br>
+      <label for="email"><b>Email</b> <span>(required)</span>
+     <input type="text" name="email" id="email" required></label><br><br>
+     <label for="status"><b>Registration Status:</b></label><br>
+     <select id="status" name="status">
+      <option value="Registered">Registered</option>
+      <option value="Waitlist">Waitlist</option>
+      <option value="Other">Other</option>
+    </select><br><br>
+    <label for="section"><b>Class Section:</b></label><br>
+    <label class="radiocontainer">CS 410P
+      <input type="radio" id="r1" name="radio">
+      <span class="checkradio"></span>
+    </label>
+    <label class="radiocontainer">CS 510
+      <input type="radio" id="r2" name="radio">
+      <span class="checkradio"></span>
+    </label><br>
+    <label class="courses" class="courses"><b>Have you taken any of the following courses?</b></label><br>
+    <label class="checkboxcontainer">Programming Languages 
+    <input type="checkbox" name="checkbox" value="Programming Languages">
+    <span class="checkstyle"></span>
+    </label>
+    <label class="checkboxcontainer"> Operating Systems
+    <input type="checkbox" name="checkbox" value="Operating Systems">
+    <span class="checkstyle"></span>
+    </label>
+    <label class="checkboxcontainer"> Full Stack Web Development
+    <input type="checkbox" name="checkbox" value="Full Stack Web Development">
+    <span class="checkstyle"></span>
+    </label><br>
+    <label class="anything"><b>Anything else?</b>
+    <textarea id="anything" name="anything" rows="4" cols="50"></textarea><br><br>
+  </label><br>
+    <button class="submit" onclick="submitform()">Submit</button>
+    <button class="reset" >Reset</button><br><br>
+     
+</form>
+  <script src="01-form.js"></script>
   </body>
 </html>

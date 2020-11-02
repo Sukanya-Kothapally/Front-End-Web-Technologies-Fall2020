@@ -1,15 +1,114 @@
-// Enter your code below
-console.log('Enter your code here');
+let url = 'https://swapi.dev/api/people/';
+let colors ={};
+getdata(url);
+async function getdata(url){
+      let swapi=await fetch(url)
+      let data = await swapi.json();
+      let urlnext='';
+      urlnext=data.next;
+      data.results.forEach(function(character){
+        if(character.eye_color in colors){
+          colors[character.eye_color] = colors[character.eye_color] + 1;
+      }
+        else{
+         colors[character.eye_color] = 1;
+        }  
+  });
+    url = urlnext;
+      if(!url){
+        doughnutChart();
+      }
+	  else{
+		  getdata(url);
+	  }  
+  }
 
-let data = {
-  blue: 21,
-  yellow: 11,
-  red: 4,
-  teal: 18,
-  purple: 9,
-  orange: 9,
-  unknown: 4,
-};
+  function doughnutChart(){
+    let colors_array = Object.keys(colors);
+    let noofcolors = Object.values(colors);	
+    let ctx = document.getElementById("myChart")
+    let Doughnut  = new Chart(ctx, {
+      type: 'doughnut',
+      data: {
+        datasets: [{
+            data: noofcolors,
+            backgroundColor: colors_array,
+        }],
+        labels: colors_array,
+      }, 
+      options: {
+        legend:{
+          position: 'bottom',
+        }
+      } 
+    });
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* let url = 'https://swapi.dev/api/people/';
+let colors ={};
+getdata(url);
+function getdata(url){     
+  fetch(url)
+  .then(data => {
+      return data.json();
+  })
+  .then(data =>{
+      let next = '';
+      next = data.next;      
+      data.results.forEach((character) => {
+      if(character.eye_color in colors){
+          colors[character.eye_color] = colors[character.eye_color] + 1;
+      }
+        else{
+         colors[character.eye_color] = 1;
+        }  
+      });
+      url = next;
+      if(!url){
+        doughnutChart();
+      }
+	  else{
+		  getdata(url);
+	  }  
+  })
+}
+
+
+function doughnutChart(){
+	let colors_array = Object.keys(colors);
+	let noofcolors = Object.values(colors);	
+  let ctx = document.getElementById("myChart")
+  let Doughnut  = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      datasets: [{
+          data: noofcolors,
+          backgroundColor: colors_array,
+      }],
+      labels: colors_array,
+    }, 
+    options: {
+      legend:{
+        position: 'bottom',
+      }
+    } 
+  });
+}
+
+*/
 
 // Colors used :
 
